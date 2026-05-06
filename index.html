@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectaZN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <nav class="sidebar">
+        <h2>ConectaZN</h2>
+        <ul>
+            <li class="active">Vagas</li>
+            <li>Meu Perfil</li>
+        </ul>
+    </nav>
+
+    <main class="content">
+
+        <!-- VAGAS -->
+        <section class="column">
+            <h3>Vagas</h3>
+
+            <div class="card">
+                <h4>Auxiliar de Logística</h4>
+                <button class="btn-small">Ver mais</button>
+            </div>
+
+            <div class="card">
+                <h4>Atendente de Loja</h4>
+                <button class="btn-small">Ver mais</button>
+            </div>
+        </section>
+
+        <!-- DETALHES -->
+        <section class="column">
+            <h3>Detalhes</h3>
+            <div class="details">
+                <h4 id="det-titulo">Selecione uma vaga</h4>
+                <p id="det-empresa"></p>
+                <p id="det-salario"></p>
+                <p id="det-desc"></p>
+                <button class="btn-primary" id="btn-candidatar">Candidatar</button>
+            </div>
+        </section>
+
+        <!-- PERFIL -->
+        <section class="column">
+            <h3>Perfil</h3>
+
+            <div class="profile-card">
+                <h4 id="nome-usuario">Usuário</h4>
+                <p id="status-usuario">Não logado</p>
+            </div>
+
+            <!-- AUTH -->
+            <div class="auth-box">
+                <h4 id="auth-title">Login</h4>
+
+                <input type="text" id="auth-email" placeholder="Email"><br><br>
+                <input type="password" id="auth-senha" placeholder="Senha"><br><br>
+
+                <button class="btn-primary" id="btn-auth">Entrar</button>
+
+                <div id="tipo-conta" style="display:none;">
+                    <p>Tipo:</p>
+                    <button class="btn-small" id="tipo-usuario">Candidato</button>
+                    <button class="btn-small" id="tipo-empresa">Empresa</button>
+                </div>
+
+                <p style="margin-top:10px;">
+                    <span id="toggle-cadastro" style="cursor:pointer;color:blue;">
+                        Criar conta
+                    </span>
+                </p>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
