@@ -1,3 +1,4 @@
+/* RESET PADRÃO */
 * {
     margin: 0;
     padding: 0;
@@ -5,106 +6,151 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* CENTRALIZAÇÃO DA TELA */
 body {
     background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
-.container {
+/* CONTAINER PRINCIPAL (O CARD) */
+.card {
+    background-color: #ffffff;
+    width: 900px;
+    min-height: 550px;
     display: flex;
-    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-/* Barra Lateral */
-.sidebar {
-    width: 250px;
-    background-color: #004aad;
+/* PAINEL ESQUERDO (AZUL) */
+.painel-esquerdo {
+    background-color: #004aad; /* Azul principal da marca */
+    width: 40%;
     color: white;
-    padding: 20px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-.sidebar h2 { margin-bottom: 30px; }
+/* Ajuste da imagem do Logo */
+.brand-logo {
+    width: 130px; 
+    height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.1));
+}
 
-.sidebar ul { list-style: none; }
+.conteudo-texto h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    font-weight: 800;
+}
 
-.sidebar li {
-    padding: 15px;
+.conteudo-texto p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* Botão Vazado (Entrar) */
+.btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 45px;
+    border-radius: 30px;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 8px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: #004aad;
+}
+
+/* PAINEL DIREITO (BRANCO) */
+.painel-direito {
+    width: 60%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.painel-direito h2 {
+    color: #004aad;
+    font-size: 2rem;
+    font-weight: 800;
     margin-bottom: 5px;
 }
 
-.sidebar li.active, .sidebar li:hover {
-    background-color: #003580;
+.subtitulo {
+    color: #777;
+    margin-bottom: 35px;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
-/* Área Principal */
-.content {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    padding: 20px;
+form {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.column {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+/* CAIXA DOS CAMPOS (CINZA) */
+.input-box {
+    width: 100%;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
 }
 
-h3 {
-    color: #004aad;
-    margin-bottom: 20px;
+.input-box i {
+    color: #888;
+    margin-right: 15px;
     font-size: 1.1rem;
 }
 
-/* Cards e Botões */
-.card, .details, .profile-card {
-    border: 1px solid #eee;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
+.input-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
 }
 
-.btn-primary {
-    background: #004aad;
+/* BOTÃO CADASTRAR (AZUL) */
+.btn-solido {
+    background-color: #004aad; /* Azul alterado conforme solicitado */
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 15px 0;
+    width: 240px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
     cursor: pointer;
-    width: 100%;
-}
-
-.btn-small {
-    background: #004aad;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    margin-top: 10px;
-}
-
-.profile-pic {
-    width: 80px;
-    height: 80px;
-    background: #ddd;
-    border-radius: 50%;
-    margin: 0 auto 10px;
-}
-
-.profile-card { text-align: center; }
-
-.auth-box {
     margin-top: 20px;
+    transition: 0.3s;
+    text-transform: uppercase;
 }
 
-.auth-box input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 5px;
+.btn-solido:hover {
+    background-color: #003380; /* Tom mais escuro para o efeito de clique */
+    box-shadow: 0 5px 15px rgba(0, 74, 173, 0.3);
 }

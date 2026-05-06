@@ -2,86 +2,53 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConectaZN</title>
+    <title>ConectaZN - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-
-    <nav class="sidebar">
-        <h2>ConectaZN</h2>
-        <ul>
-            <li class="active">Vagas</li>
-            <li>Meu Perfil</li>
-        </ul>
-    </nav>
-
-    <main class="content">
-
-        <!-- VAGAS -->
-        <section class="column">
-            <h3>Vagas</h3>
-
-            <div class="card">
-                <h4>Auxiliar de Logística</h4>
-                <button class="btn-small">Ver mais</button>
-            </div>
-
-            <div class="card">
-                <h4>Atendente de Loja</h4>
-                <button class="btn-small">Ver mais</button>
-            </div>
-        </section>
-
-        <!-- DETALHES -->
-        <section class="column">
-            <h3>Detalhes</h3>
-            <div class="details">
-                <h4 id="det-titulo">Selecione uma vaga</h4>
-                <p id="det-empresa"></p>
-                <p id="det-salario"></p>
-                <p id="det-desc"></p>
-                <button class="btn-primary" id="btn-candidatar">Candidatar</button>
-            </div>
-        </section>
-
-        <!-- PERFIL -->
-        <section class="column">
-            <h3>Perfil</h3>
-
-            <div class="profile-card">
-                <h4 id="nome-usuario">Usuário</h4>
-                <p id="status-usuario">Não logado</p>
-            </div>
-
-            <!-- AUTH -->
-            <div class="auth-box">
-                <h4 id="auth-title">Login</h4>
-
-                <input type="text" id="auth-email" placeholder="Email"><br><br>
-                <input type="password" id="auth-senha" placeholder="Senha"><br><br>
-
-                <button class="btn-primary" id="btn-auth">Entrar</button>
-
-                <div id="tipo-conta" style="display:none;">
-                    <p>Tipo:</p>
-                    <button class="btn-small" id="tipo-usuario">Candidato</button>
-                    <button class="btn-small" id="tipo-empresa">Empresa</button>
+    <div class="container">
+        <div class="card">
+            
+            <div class="painel-esquerdo">
+                <div class="logo-area">
+                    <img src="fotos/759b31a5-5b0c-4973-afcf-1857b90b463b-Photoroom.png" alt="ConectaZN Logo" class="brand-logo">
                 </div>
-
-                <p style="margin-top:10px;">
-                    <span id="toggle-cadastro" style="cursor:pointer;color:blue;">
-                        Criar conta
-                    </span>
-                </p>
+                
+                <div class="conteudo-texto">
+                    <h2>Bem-Vindo</h2>
+                    <p>Acesse sua conta para conferir<br>as vagas na sua região.</p>
+                    <button class="btn-outline">ENTRAR</button>
+                </div>
             </div>
-        </section>
 
-    </main>
-</div>
+            <div class="painel-direito">
+                <h2>Crie sua conta</h2>
+                <p class="subtitulo">Cadastre seus dados no ConectaZN</p>
 
-<script src="script.js"></script>
+                <form action="#">
+                    <div class="input-box">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" placeholder="NOME" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="EMAIL" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="SENHA" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-solido">CADASTRAR</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 </html>
