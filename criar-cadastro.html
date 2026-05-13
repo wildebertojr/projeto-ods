@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectaZN - Criar Conta</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="card">
+        <!-- PAINEL ESQUERDO (AZUL) -->
+        <section class="painel-esquerdo">
+            <img src="imagens/LOGO.png" alt="ConectaZN Logo" class="brand-logo"> <!-- Substitua pelo caminho do seu logo -->
+            
+            <div class="conteudo-texto">
+                <h2>Bem-Vindo de volta</h2>
+                <p>Acesse sua conta para conferir as vagas na sua região.</p>
+                <button class="btn-outline">Voltar</button>
+            </div>
+        </section>
+
+        <!-- PAINEL DIREITO (BRANCO) -->
+        <section class="painel-direito">
+            <h2>Crie sua conta</h2>
+            <p class="subtitulo">Cadastre seus dados no ConectaZN</p>
+
+            <form action="#">
+                <!-- Campo Nome -->
+                <div class="input-box">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="NOME" required>
+                </div>
+
+                <!-- Campo Email -->
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="EMAIL" required>
+                </div>
+
+                <!-- Campo Senha -->
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="SENHA" required>
+                </div>
+
+                <!-- Campo Confirmar Senha -->
+                <div class="input-box">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <input type="password" placeholder="CONFIRMAR SENHA" required>
+                </div>
+
+                <!-- Campo Área de Interesse -->
+                <div class="input-box">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <input type="text" placeholder="ÁREA DE INTERESSE" required>
+                </div>
+
+                <button type="submit" class="btn-solido">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
