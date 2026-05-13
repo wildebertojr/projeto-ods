@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (dados && dados.senha === senha) {
                 localStorage.setItem("logado", email);
                 alert("Login realizado com sucesso!");
-                window.location.href = "dashboard.html"; // Vai para a página da imagem image_2b4277.png
+                window.location.href = "dashboard.html";
             } else {
                 alert("Email ou senha incorretos!");
             }
@@ -34,7 +34,21 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem(email, JSON.stringify(dados));
 
             alert("Cadastro realizado! Agora faça seu login.");
-            window.location.href = "login.html"; // Volta para o login para testar a conta nova
+            window.location.href = "login.html";
+        });
+    }
+
+    // --- LOGOUT (SAIR) ---
+    const btnSair = document.getElementById("btn-sair");
+
+    if (btnSair) {
+        btnSair.addEventListener("click", () => {
+            const confirmar = confirm("Tem certeza que deseja sair?");
+
+            if (confirmar) {
+                localStorage.removeItem("logado");
+                window.location.href = "login.html";
+            }
         });
     }
 });
