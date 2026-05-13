@@ -1,111 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-    let modoCadastro = false;
-    let tipoConta = "";
-
-    // alternar login/cadastro
-    document.getElementById("toggle-cadastro").addEventListener("click", () => {
-        modoCadastro = !modoCadastro;
-
-        document.getElementById("auth-title").innerText = modoCadastro ? "Cadastro" : "Login";
-        document.getElementById("btn-auth").innerText = modoCadastro ? "Cadastrar" : "Entrar";
-        document.getElementById("tipo-conta").style.display = modoCadastro ? "block" : "none";
-    });
-
-    // escolher tipo
-    document.getElementById("tipo-usuario").addEventListener("click", () => {
-        tipoConta = "usuario";
-        alert("Candidato selecionado");
-    });
-
-    document.getElementById("tipo-empresa").addEventListener("click", () => {
-        tipoConta = "empresa";
-        alert("Empresa selecionada");
-    });
-
-    // botão principal
-    document.getElementById("btn-auth").addEventListener("click", () => {
-
-        const email = document.getElementById("auth-email").value;
-        const senha = document.getElementById("auth-senha").value;
-
-        if (modoCadastro) {
-
-            if (!tipoConta) {
-                alert("Escolha o tipo!");
-                return;
-            }
-
-            const nome = prompt("Digite seu nome:");
-
-            const dados = { nome, email, senha, tipo: tipoConta };
-
-            localStorage.setItem(email, JSON.stringify(dados));
-
-            alert("Cadastro feito!");
-
-        } else {
-
+    
+    // --- LÓGICA DE LOGIN ---
+    const formLogin = document.getElementById("form-login");
+    if (formLogin) {
+        formLogin.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const email = document.getElementById("auth-email").value;
+            const senha = document.getElementById("auth-senha").value;
+            
             const dados = JSON.parse(localStorage.getItem(email));
 
             if (dados && dados.senha === senha) {
-
                 localStorage.setItem("logado", email);
-
-                document.getElementById("nome-usuario").innerText = dados.nome;
-                document.getElementById("status-usuario").innerText =
-                    dados.tipo === "empresa" ? "Empresa logada" : "Candidato logado";
-
-                alert("Login ok!");
-
+                alert("Login realizado com sucesso!");
+                window.location.href = "dashboard.html"; // Vai para a página da imagem image_2b4277.png
             } else {
-                alert("Erro no login");
+                alert("Email ou senha incorretos!");
             }
-        }
-    });
-
-    // carregar usuário
-    const email = localStorage.getItem("logado");
-
-    if (email) {
-        const dados = JSON.parse(localStorage.getItem(email));
-
-        if (dados) {
-            document.getElementById("nome-usuario").innerText = dados.nome;
-            document.getElementById("status-usuario").innerText =
-                dados.tipo === "empresa" ? "Empresa logada" : "Candidato logado";
-        }
+        });
     }
 
-    // vagas
-    const vagas = {
-        "Auxiliar de Logística": {
-            empresa: "Logis Express",
-            salario: "R$ 1800",
-            desc: "Controle de estoque"
-        },
-        "Atendente de Loja": {
-            empresa: "Super Norte",
-            salario: "R$ 1650",
-            desc: "Atendimento ao cliente"
-        }
-    };
+    // --- LÓGICA DE CADASTRO ---
+    const formCadastro = document.getElementById("form-cadastro");
+    if (formCadastro) {
+        formCadastro.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const nome = document.getElementById("reg-nome").value;
+            const email = document.getElementById("reg-email").value;
+            const senha = document.getElementById("reg-senha").value;
+            const area = document.getElementById("reg-area").value;
 
-    document.querySelectorAll(".btn-small").forEach(btn => {
-        btn.addEventListener("click", (e) => {
+            const dados = { nome, email, senha, area };
+            localStorage.setItem(email, JSON.stringify(dados));
 
-            const titulo = e.target.closest(".card").querySelector("h4").innerText;
-            const vaga = vagas[titulo];
-
-            document.getElementById("det-titulo").innerText = titulo;
-            document.getElementById("det-empresa").innerText = "Empresa: " + vaga.empresa;
-            document.getElementById("det-salario").innerText = "Salário: " + vaga.salario;
-            document.getElementById("det-desc").innerText = vaga.desc;
+            alert("Cadastro realizado! Agora faça seu login.");
+            window.location.href = "login.html"; // Volta para o login para testar a conta nova
         });
-    });
-
-    document.getElementById("btn-candidatar").addEventListener("click", () => {
-        alert("Candidatura enviada!");
-    });
-
+    }
 });

@@ -7,48 +7,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
         <div class="card">
-            
+            <!-- PAINEL ESQUERDO (AZUL) -->
             <div class="painel-esquerdo">
                 <div class="logo-area">
                     <img src="imagens/LOGO.png" alt="ConectaZN Logo" class="brand-logo">
                 </div>
-                
                 <div class="conteudo-texto">
-                    <h2>Bem-Vindo</h2>
-                    <p>Acesse sua conta para conferir<br>as vagas na sua região.</p>
-                    <button class="btn-outline">CADASTRAR</button>
+                    <h2>Novo por aqui?</h2>
+                    <p>Crie sua conta para conferir<br>as vagas na sua região.</p>
+                    <!-- LINK PARA CADASTRO -->
+                    <a href="criar-cadastro.html" class="btn-outline" style="text-decoration: none; text-align: center; display: inline-block;">CADASTRAR</a>
                 </div>
             </div>
 
+            <!-- PAINEL DIREITO (BRANCO) -->
             <div class="painel-direito">
                 <h2>Acesse sua conta</h2>
                 <p class="subtitulo">Informe seus dados no ConectaZN</p>
 
-                <form action="#">
-                    <div class="input-box">
-                        <i class="fa-regular fa-user"></i>
-                        <input type="text" placeholder="NOME" required>
-                    </div>
-                    
+                <form id="form-login">
                     <div class="input-box">
                         <i class="fa-regular fa-envelope"></i>
-                        <input type="email" placeholder="EMAIL" required>
+                        <input type="email" id="auth-email" placeholder="EMAIL" required>
                     </div>
-                    
                     <div class="input-box">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="SENHA" required>
+                        <input type="password" id="auth-senha" placeholder="SENHA" required>
                     </div>
-                    
-                    <button type="submit" class="btn-solido">ENTRAR</button>
+                    <button type="submit" id="btn-auth" class="btn-solido">ENTRAR</button>
                 </form>
             </div>
-
         </div>
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
