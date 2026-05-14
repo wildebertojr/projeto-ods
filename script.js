@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // --- 1. NAVEGAÇÃO DA SIDEBAR (MANTIDA) ---
     const rotas = {
         "btn-inicio": "dashboard.html",
         "btn-vagas": "vagas.html",
         "btn-perfil": "perfil.html",
         "btn-candidaturas": "candidaturas.html",
         "btn-config": "configuracoes.html",
-        "btn-sair": "login.html" // Ajustado para o nome do seu arquivo de login
+        "btn-sair": "login.html" 
     };
 
     Object.keys(rotas).forEach(id => {
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // --- 2. LÓGICA DO PERFIL (MANTIDA) ---
     const editBtn = document.getElementById('edit-btn');
     const saveBtn = document.getElementById('save-btn');
     const camposIds = ['perf-nome', 'perf-email', 'perf-tel', 'perf-sexo', 'perf-nascimento'];
@@ -65,13 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- 3. LÓGICA DE LOGIN E CADASTRO (AJUSTADA AOS SEUS HTMLS) ---
-
-    // LOGIN: Usa o id="btn-auth" que está no seu HTML
     const btnEntrar = document.getElementById('btn-auth');
     if (btnEntrar) {
         btnEntrar.addEventListener('click', (e) => {
-            // Verifica se o formulário está preenchido antes de mudar de página
             const form = document.getElementById('form-login');
             if (form.checkValidity()) {
                 e.preventDefault();
@@ -80,13 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // CADASTRO: Usa o id="form-cadastro" para capturar o envio
     const formCadastro = document.getElementById('form-cadastro');
     if (formCadastro) {
         formCadastro.addEventListener('submit', (e) => {
-            e.preventDefault(); // Para o envio padrão
+            e.preventDefault();
             alert("Cadastro realizado com sucesso!");
-            window.location.href = "login.html"; // Mude para o nome correto do seu arquivo de login
-        });
+            window.location.href = "login.html"; 
     }
 });
