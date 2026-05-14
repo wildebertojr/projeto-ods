@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #eaeaea;
+}
+
+
+.layout {
+  display: flex;
+}
+
+
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: #0f4aa1;
+  color: white;
+  padding: 25px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.logo h2 {
+  font-size: 25px;
+}
+
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar li:hover,
+.sidebar .active {
+  background: rgba(255,255,255,0.2);
+}
+
+.logout {
+  margin-top: 40px;
+}
+
+
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+
+.topo {
+  margin-bottom: 25px;
+}
+
+.topo h1 {
+  color: #0f4aa1;
+}
+
+
+.resumo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.box {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.box p {
+  color: #888;
+}
+
+.box h2 {
+  color: #0f4aa1;
+}
+
+
+.vagas h2 {
+  margin-bottom: 15px;
+  color: #0f4aa1;
+}
+
+.vaga {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vaga h3 {
+  color: #333;
+}
+
+.vaga p {
+  color: #777;
+}
+
+
+button {
+  background: #0f4aa1;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0c3d85;
+}

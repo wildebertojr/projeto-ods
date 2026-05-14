@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>ConectaZN - Perfil</title>
+  <!-- Linkando o CSS que você mandou -->
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="layout">
+  <!-- SIDEBAR (Barra Lateral Azul) -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="imagens/LOGO.png" alt="Logo ConectaZN">
+      <h2>ConectaZN</h2>
+    </div>
+    <ul>
+      <li id="btn-inicio"><i class="fa-solid fa-house"></i> Início</li>
+      <li id="btn-vagas"><i class="fa-solid fa-briefcase"></i> Vagas</li>
+      <li class="active" id="btn-perfil"><i class="fa-solid fa-user"></i> Meu Perfil</li>
+      <li id="btn-candidaturas"><i class="fa-solid fa-clipboard"></i> Candidaturas</li>
+      <li id="btn-config"><i class="fa-solid fa-gear"></i> Configurações</li>
+      <li class="logout" id="btn-sair"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</li>
+    </ul>
+  </aside>
+
+  <!-- CONTEÚDO PRINCIPAL (Fundo Cinza) -->
+  <main class="main">
+    <header class="topo">
+      <h1><i class="fa-solid fa-user"></i> Meu Perfil</h1>
+    </header>
+
+    <section class="perfil-container" style="max-width: 600px; margin: 20px auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <form id="form-perfil">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <i class="fa-solid fa-circle-user" style="font-size: 80px; color: #0f4aa1;"></i>
+          <h2 style="margin-top: 10px; color: #333;">Dados Pessoais</h2>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+          <label style="display:block; font-weight: bold; margin-bottom: 5px; color: #333;">Nome Completo</label>
+          <input type="text" id="perf-nome" readonly placeholder="Digite seu nome" style="width:100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; background: #f9f9f9;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+          <label style="display:block; font-weight: bold; margin-bottom: 5px; color: #333;">E-mail</label>
+          <input type="email" id="perf-email" readonly placeholder="seu@email.com" style="width:100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; background: #f9f9f9;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+          <label style="display:block; font-weight: bold; margin-bottom: 5px; color: #333;">Telefone</label>
+          <input type="tel" id="perf-tel" readonly placeholder="(00) 00000-0000" style="width:100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; background: #f9f9f9;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+          <label style="display:block; font-weight: bold; margin-bottom: 5px; color: #333;">Sexo</label>
+          <select id="perf-sexo" disabled style="width:100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; background: #f9f9f9;">
+            <option value="">Selecione...</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <label style="display:block; font-weight: bold; margin-bottom: 5px; color: #333;">Data de Nascimento</label>
+          <input type="date" id="perf-nascimento" readonly style="width:100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; background: #f9f9f9;">
+        </div>
+
+        <button type="button" id="edit-btn" style="width: 100%; padding: 15px; background: #28a745; color: white; border: none; border-radius: 10px; font-weight: bold; cursor: pointer;">Editar Perfil</button>
+        <button type="button" id="save-btn" style="width: 100%; padding: 15px; background: #0f4aa1; color: white; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; display: none;">Salvar Alterações</button>
+      </form>
+    </section>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
