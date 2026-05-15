@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     const rotas = {
         "btn-inicio": "dashboard.html",
         "btn-vagas": "vagas.html",
         "btn-perfil": "perfil.html",
         "btn-candidaturas": "candidaturas.html",
-        "btn-config": "configuracoes.html",
+        "btn-config": "configurações.html",
         "btn-sair": "login.html" 
     };
 
@@ -34,12 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
             camposIds.forEach(id => {
                 const campo = document.getElementById(id);
                 if (campo) {
-                    if (campo.tagName === 'SELECT') { campo.disabled = false; } 
-                    else { campo.readOnly = false; }
+                    if (campo.tagName === 'SELECT') {
+                        campo.disabled = false;
+                    } else {
+                        campo.readOnly = false;
+                    }
                     campo.style.background = "#ffffff";
                     campo.style.border = "1px solid #0f4aa1";
                 }
             });
+
             editBtn.style.display = "none";
             if (saveBtn) saveBtn.style.display = "block";
             document.getElementById('perf-nome').focus();
@@ -49,17 +53,22 @@ document.addEventListener("DOMContentLoaded", () => {
     if (saveBtn) {
         saveBtn.addEventListener('click', () => {
             alert("Alterações salvas com sucesso!");
+
             camposIds.forEach(id => {
                 const campo = document.getElementById(id);
                 if (campo) {
-                    if (campo.tagName === 'SELECT') { campo.disabled = true; } 
-                    else { campo.readOnly = true; }
+                    if (campo.tagName === 'SELECT') {
+                        campo.disabled = true;
+                    } else {
+                        campo.readOnly = true;
+                    }
                     campo.style.background = "#f9f9f9";
                     campo.style.border = "1px solid #ccc";
                 }
             });
+
             saveBtn.style.display = "none";
-            editBtn.style.display = "block";
+            if (editBtn) editBtn.style.display = "block";
         });
     }
 
@@ -67,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnEntrar) {
         btnEntrar.addEventListener('click', (e) => {
             const form = document.getElementById('form-login');
-            if (form.checkValidity()) {
+            if (form && form.checkValidity()) {
                 e.preventDefault();
                 window.location.href = "dashboard.html";
             }
@@ -79,6 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
         formCadastro.addEventListener('submit', (e) => {
             e.preventDefault();
             alert("Cadastro realizado com sucesso!");
-            window.location.href = "login.html"; 
+            window.location.href = "login.html";
+        });
     }
+
 });

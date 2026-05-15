@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ConectaZN</title>
+
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="vagas.css">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="logo">
+      <img src="imagens/LOGO.png" alt="Logo ConectaZN">
+      <h2>ConectaZN</h2>
+    </div>
+
+    <ul>
+      <li id="btn-inicio"><i class="fa-solid fa-house"></i> Início</li>
+      <li id="btn-vagas"><i class="fa-solid fa-briefcase"></i> Vagas</li>
+      <li id="btn-perfil"><i class="fa-solid fa-user"></i> Meu Perfil</li>
+      <li id="btn-candidaturas"><i class="fa-solid fa-clipboard"></i> Candidaturas</li>
+      <li class="active" id="btn-config"><i class="fa-solid fa-pencil"></i></i> Especializações</li>
+      <li class="logout" id="btn-sair"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</li>
+    </ul>
+
+  </aside>
+
+  <!-- CONTEÚDO -->
+  <main class="main">
+
+    <header class="topo">
+      <h1>
+        <i class="fa-solid fa-book-bookmark"></i>
+        Conheça seus cursos recomendados!
+      </h1>
+    </header>
+
+    <!-- RESUMO -->
+    <section class="resumo">
+
+      <div class="box">
+        <p>Humanas</p>
+        <h2>30 cursos</h2>
+        <button class="btn-ver">Ver cursos</button>
+      </div>
+
+      <div class="box">
+        <p>Exatas</p>
+        <h2>23 cursos</h2>
+        <button class="btn-ver">Ver cursos</button>
+      </div>
+
+      <div class="box">
+        <p>Tecnologia</p>
+        <h2>15 cursos</h2>
+        <button class="btn-ver">Ver cursos</button>
+      </div>
+
+      <div class="box">
+        <p>Saúde</p>
+        <h2>20 cursos</h2>
+        <button class="btn-ver">Ver cursos</button>
+      </div>
+
+    </section>
+
+    <!-- CURSOS (ANTES ERA VAGAS) -->
+    <section class="vagas">
+
+      <h2>
+        <i class="fa-solid fa-star"></i>
+        Cursos em destaque</h2>
+      
+
+      <!-- CURSO 1 -->
+      <div class="vaga">
+
+        <div class="info-vaga">
+
+          <h3>Introdução à Psicologia</h3>
+
+          <div class="detalhes">
+            <p><i class="fa-solid fa-book"></i> Humanas</p>
+            <p><i class="fa-solid fa-clock"></i> 40h</p>
+            <p><i class="fa-solid fa-signal"></i> Básico</p>
+            <p><i class="fa-solid fa-certificate"></i> Certificado</p>
+          </div>
+
+        </div>
+
+        <button>Ver curso</button>
+
+      </div>
+
+      <!-- CURSO 2 -->
+      <div class="vaga">
+
+        <div class="info-vaga">
+
+          <h3>Fundamentos de Programação</h3>
+
+          <div class="detalhes">
+            <p><i class="fa-solid fa-code"></i> Tecnologia</p>
+            <p><i class="fa-solid fa-clock"></i> 60h</p>
+            <p><i class="fa-solid fa-signal"></i> Iniciante</p>
+            <p><i class="fa-solid fa-certificate"></i> Certificado</p>
+          </div>
+
+        </div>
+
+        <button>Ver curso</button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
